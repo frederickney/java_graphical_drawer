@@ -1,5 +1,12 @@
-Java 1.8 required for running Run_TP5.jar
+Java 1.7 or higher required for running run_tp5.jar
+
+
 compiling classes:
-	cd exec && jar -cmf ../manifest.mf ../TP5_NEY.jar  ./
-usage: 
-	java -jar Run_TP5.jar <path to files containing some values>
+	make build
+run:
+    make run param="your file here without quote"
+Generating doc:
+    make doc:
+cleaning:
+    make clean
+    make clean_doc
