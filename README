@@ -1,0 +1,5 @@
+Java 1.8 required for running Run_TP5.jar
+compiling classes:
+	cd exec && jar -cmf ../manifest.mf ../TP5_NEY.jar  ./
+usage: 
+	java -jar Run_TP5.jar <path to files containing some values>
