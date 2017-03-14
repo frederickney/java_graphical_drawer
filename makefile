@@ -7,10 +7,11 @@ DOCPATH=javadoc
 MANIFEST=manifest.mf
 EXEC=run_tp5.jar
 
+all: doc build
 
 build: $(EXEC)
 
-run: build
+run: $(EXEC)
 	java -jar $(EXEC) $(param)
 	
 $(EXEC): $(OBJECT)
@@ -25,8 +26,12 @@ $(OBJECT): $(SRC)
 	@echo -e "[\033[0;32mDONE\033[0m]"
 
 clean:
-	@echo "Cleaning..."
-	@rm -rf $(BINPATH) $(EXEC)
+	@echo "Removing jar file..."
+	@rm -rf $(EXEC)
+	@echo "Cleaning generated class files..."
+	@rm -rf $(BINPATH)
+	@echo "Cleaning docs..."
+	@rm -rf $(DOCPATH)
 
 doc:
 	@echo "Generating docs..."
@@ -34,6 +39,3 @@ doc:
 	@javadoc -d $(DOCPATH) -sourcepath $(SRCPATH) -subpackages $(PACKAGE)
 	@echo -e "[\033[0;32mDONE\033[0m]"
 
-clean_doc:
-	@echo "Cleaning docs..."
-	@rm -rf $(DOCPATH)

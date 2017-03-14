@@ -20,7 +20,6 @@ import javax.swing.JFrame;
 import sources.reader.File;
 
 /**
- * @class GUI
  * @author admin_master
  */
 public final class GUI extends JFrame {
@@ -30,15 +29,13 @@ public final class GUI extends JFrame {
     private final ArrayList<Point2D> pointsList;
     private final ArrayList<Line2D> linesList;
     /**
-     * @description GUI constructor
-     * @constructor GUI
      * @param fileName The file name/path with some numerics for building lines and points.
      * @throws IOException 
      */
     public GUI (String fileName) throws IOException {
         super("Line Creator");
-        this.pointsList = new ArrayList<>();
-        this.linesList = new ArrayList<>();
+        this.pointsList = new ArrayList<Point2D>();
+        this.linesList = new ArrayList<Line2D>();
         new File().readFile(fileName, pointsList, linesList);
         initGUI();
         Panel = new Panel(pointsList, linesList);
@@ -49,8 +46,6 @@ public final class GUI extends JFrame {
         enableEvents(WindowEvent.WINDOW_CLOSING);
     }
     /**
-     * @description initializing the GUI
-     * @function initGUI
      */
     private void initGUI() {
         this.setIconImage(FrameIcon);
@@ -60,8 +55,6 @@ public final class GUI extends JFrame {
         this.addWindowListener(exhop);
     }
     /**
-     * @description adding component to GUI
-     * @function addComponent
      * @param o It's the object instance of Panel which is added to the GUI.
      * @see Panel
      */
@@ -72,23 +65,18 @@ public final class GUI extends JFrame {
     }
 }
 /**
- * @class winEx
  * @author admin_master
  */
 class winExit extends WindowAdapter {
     public static final int CLOSE = 0;
     int id;
     /**
-     * @description winExit constructor
-     * @constructor winExit
-     * @param id 
+     * @param id
      */
     winExit(int id) {
         this.id = id;
     }
     /**
-     * @description windows closing event function (override)
-     * @function windowClosing
      * @param we The window closing event.
      * @see java.awt.event.WindowEvent
      */

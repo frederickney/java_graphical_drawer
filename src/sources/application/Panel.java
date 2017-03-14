@@ -15,7 +15,6 @@ import sources.geom2D.Line2D;
 import java.awt.Color;
 
 /**
- * @class Panel
  * @author admin_master
  */
 public class Panel extends JPanel {
@@ -32,8 +31,6 @@ public class Panel extends JPanel {
     private double scopeX = 0;
     private double scopeY = 0;
     /**
-     * @description Panel constructor 
-     * @constructor Panel
      * @param pointsList Point2D array list.
      * @see Point2D
      * @param linesList Line2D array list.
@@ -95,9 +92,7 @@ public class Panel extends JPanel {
         this.scopeY = this.maxY - this.minY;
     }
     /**
-     * @description painting points
-     * @function drawPoints
-     * @param g Graphics element 
+     * @param g Graphics element
      * @see java.awt.Graphics
      * @param scaleX (Double). The scale between max and min value of x.
      * @param scaleY (Double). The scale between max and min value of y.
@@ -161,9 +156,7 @@ public class Panel extends JPanel {
         });
     }
     /**
-     * @description painting Panel component 
-     * @function paintComponent (override)
-     * @param g Graphics element. 
+     * @param g Graphics element.
      * @see java.awt.Graphics
      */
     @Override

@@ -11,13 +11,10 @@ import sources.application.GUI;
 import java.io.IOException;
 
 /**
- * @class sources.Exe
  * @author admin_master
  */
 public class Exe {
     /**
-     * @description program executing function
-     * @function main
      * @param args The input file argument.
      * @throws IOException 
      */

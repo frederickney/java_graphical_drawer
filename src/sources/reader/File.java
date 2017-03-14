@@ -16,13 +16,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * @class File
  * @author admin_master
  */
 public class File {
     /**
-     * @description reading the input file and storing double value into specific array list.
-     * @function readFile
      * @param fileName  The file name/path with some numerics for building lines and points.
      * @param pointsList Point2D array list.
      * @see Point2D
@@ -66,10 +63,8 @@ public class File {
         }
     }
     /**
-     * @description checking token
-     * @function checkTokens
      * @param token An array of string taken from the input file.
-     * @return 
+     * @return : boolean
      */
     private boolean checkTokens(String[] token) {
         boolean bool = true;
@@ -78,10 +73,8 @@ public class File {
         return bool;
     }
     /**
-     * @description testing if string is numeric
-     * @function isNumeric
      * @param string A string from the input file. testing if it's a numeric or not.
-     * @return 
+     * @return : boolean
      */
     private boolean isNumeric(String string) {
         try {
