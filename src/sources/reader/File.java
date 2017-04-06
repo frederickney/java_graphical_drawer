@@ -25,7 +25,7 @@ public class File {
      * @see Point2D
      * @param linesList Line2D array list.
      * @see Line2D
-     * @throws IOException 
+     * @throws IOException : file not found
      */
     public void readFile(String fileName, ArrayList<Point2D> pointsList, ArrayList<Line2D> linesList) throws IOException {
         try (BufferedReader buffer = new BufferedReader(new FileReader(fileName))) {

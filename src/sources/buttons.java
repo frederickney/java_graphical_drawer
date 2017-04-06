@@ -40,16 +40,12 @@ public class buttons extends JFrame implements ActionListener {
                 buttons[i][j].addActionListener(this);
             }
         }
-        //this.add(test, BorderLayout.CENTER);
-
-
     }
 
 @Override
 public void actionPerformed(ActionEvent e) {
     Object o = e.getSource();
     Component[] components = test.getComponents();
-
     for (int i = 0; i < components.length; i++) {
         if (components[i] == o) {
             // Remove the button that was clicked.
@@ -59,7 +55,6 @@ public void actionPerformed(ActionEvent e) {
             test.add(new JLabel(), i);
         }
     }
-
     // Force Swing to repaint the panel.
     test.repaint();
 }

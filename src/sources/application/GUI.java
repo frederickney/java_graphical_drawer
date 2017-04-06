@@ -18,19 +18,19 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import sources.reader.File;
+import java.awt.Toolkit;
 
 /**
  * @author admin_master
  */
 public final class GUI extends JFrame {
-    ImageIcon Icon = new ImageIcon("netbeans.png");
-    Image FrameIcon = Icon.getImage();
+    String Icon = "/logo/icons.png";
     Panel Panel;
     private final ArrayList<Point2D> pointsList;
     private final ArrayList<Line2D> linesList;
     /**
      * @param fileName The file name/path with some numerics for building lines and points.
-     * @throws IOException 
+     * @throws IOException : file not found
      */
     public GUI (String fileName) throws IOException {
         super("Line Creator");
@@ -48,7 +48,7 @@ public final class GUI extends JFrame {
     /**
      */
     private void initGUI() {
-        this.setIconImage(FrameIcon);
+        this.setIconImage( new ImageIcon((getClass().getResource(Icon))).getImage());
         this.setResizable(true);
         this.setSize(600 , 400);
         winExit exhop = new winExit(winExit.CLOSE);

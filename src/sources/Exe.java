@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Exe {
     /**
      * @param args The input file argument.
-     * @throws IOException 
+     * @throws IOException : file not found
      */
     public static void main(String[] args) throws IOException {
         new GUI(args[0]);
